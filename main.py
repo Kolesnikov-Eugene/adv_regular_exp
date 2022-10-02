@@ -60,4 +60,5 @@ def delete_duplicates(contacts: list):
 # код для записи файла в формате CSV
 with open('phonebook.csv', 'w') as f:
     datawriter = csv.writer(f, delimiter=',')
-    datawriter.writerows(create_correct_list(contacts_list))
+    result = create_correct_list(contacts_list)
+    datawriter.writerows(result)
